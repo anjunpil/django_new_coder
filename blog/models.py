@@ -9,6 +9,7 @@ class Post(models.Model):
 	title  =models.CharField(max_length=200)
 	#CharField - 글자 수가 제한된 텍스트를 정의할 때 사용
 	#TextField - 글자 수 제한 없는 텍스트
+	text = models.TextField(null=True)
 	created_date = models.DateTimeField(default=timezone.now)
 	#DateTimeField - 날짜와 시간을 의미
 	published_date= models.DateTimeField(blank=True,null=True)
