@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+	<head>
+		<title>Django Girl's blog</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">	
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css"></head>
+		
+	<body>
+		<div class = "Page-header">
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			<h1><a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Django Girls Blog</a></h1>
+			
+		</div>
+		{% block content %}
+		{% endblock %}
+	</body>
+	
+</html>
